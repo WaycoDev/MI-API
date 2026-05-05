@@ -16,7 +16,7 @@ MI API – interfaces that don't look like they did in 2011
 
 ### For users
 1. Install **Fabric Loader** (>=0.16.0) for Minecraft 1.21.4.
-2. Download `mi-api-1.0.0.jar` from the [Releases](#) section.
+2. Download `mi-api-4.x.jar` from the [Releases](#) section.
 3. Place the file in the `mods/` folder and run the game.
 
 ### For developers (integrating into your mod)
@@ -31,7 +31,7 @@ url = "https://maven.pkg.github.com/WaycoDev/MI-API"
 }
 
 dependencies {
-modImplementation "com.vivid.mi:mi-api:1.0.0"
+modImplementation "com.vivid.mi:mi-api:4.x"
 }
 ```
 
@@ -47,6 +47,17 @@ modImplementation "com.vivid.mi:mi-api:1.0.0"
 <artifactId>mi-api</artifactId>
 <version>1.0.0</version>
 </dependency>
+```
+
+#### Build
+```xml
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modImplementation files('libs/mi-api-4.x.jar')
+}
 ```
 
 > **Note:** Replace `WaycoDev/MI-API` with the actual path to your repository if it differs.
