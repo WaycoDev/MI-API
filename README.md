@@ -158,4 +158,39 @@ settings.setAutoScroll(true);
 The library uses exactly **one** mixin, which forces 1:1 scaling for the entire client.
 
 ```java
-@Mixin(W)
+@Mixin(Window.class)
+public class WindowMixin {
+@ModifyReturnValue(method = "getScaledWindowWidth", at = @At("RETURN"))
+private int forceWindowWidth(int original) {
+return ((Window)(Object)this).getFramebufferWidth();
+}
+
+@ModifyReturnValue(method = "getScaledWindowHeight", at = @At("RETURN"))
+private int forceWindowHeight(int original) {
+return ((Window)(Object)this).getFramebufferHeight();
+}
+}
+```
+
+> **⚠️ Important:** This mixin affects the **entire client**. If other mods use `getScaledWindowWidth`, they may not display correctly. If necessary, the mixin can be disabled by removing `"WindowMixin"` from `mi-api.mixins.json`.
+
+* * *
+
+## 🐛 Known Limitations and Plans
+
+| Limitation | Plans |
+|-------------|-------|
+| Gradient only **vertical** | Add horizontal and diagonal |
+| Header buttons use placeholder textures | Allow them to be overridden via theme |
+| Global mixin | Add a config file to disable it |
+
+* * *
+
+## 🔗 License and Credits
+
+* **License:** MIT. Do whatever you want, but credit the author (WaycoDev).
+* **Inspiration:** Mojang (for the guiScale bug), Fabric, and SpongePowered (for the mixins), Modrinth (for **modern** design.
+
+**MI APIs — interfaces that don't look like they were made in 2011.**
+
+---
