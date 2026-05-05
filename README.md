@@ -1,5 +1,7 @@
 # MI-API
 MI API – interfaces that don't look like they did in 2011
+[![GitHub Release](https://img.shields.io/github/v/release/WaycoDev/MI-API)](https://github.com/WaycoDev/MI-API/releases)
+[![Fabric](https://img.shields.io/badge/mod%20loader-Fabric-orange)](https://fabricmc.net/)
 # 🧩 Modern Interface API (MI API) — Create modern GUIs in Minecraft
 
 **MI API** is an independent client-side library for Fabric that allows you to create windowed interfaces with theming, scrolling, and full input control**, without relying on vanilla Minecraft's hacky `guiScale`.
