@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "me/WaycoDev/mi/api/mixin/WindowMixin": {
+      "getScaledHeight": "Lnet/minecraft/class_1041;method_4502()I",
+      "getScaledWidth": "Lnet/minecraft/class_1041;method_4486()I"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "me/WaycoDev/mi/api/mixin/WindowMixin": {
+        "getScaledHeight": "Lnet/minecraft/class_1041;method_4502()I",
+        "getScaledWidth": "Lnet/minecraft/class_1041;method_4486()I"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mi-api",
+  "version": "beta-4.6",
+  "name": "MI API",
+  "description": "Modern Interface API — красивый GUI для Fabric",
+  "authors": ["YendaveyYouTube"],
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.vivid.mi.api.MIAPI"
+    ]
+  },
+  "mixins": [
+    "mi-api.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": ">=1.21"
+  }
+}
